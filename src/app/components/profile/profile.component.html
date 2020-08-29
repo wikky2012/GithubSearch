@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="jumbotron bg-info text-center" >Github Search Application</div>
+    <div *ngIf="profile">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                {{profile.login}}
+                <span *ngIf="profile.company">, Works at {{profile.company}}</span>
+                {{profile.location}}
+                {{profile.created_at}}
+                
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image" srcset="">
+                    </div>
+                    <div class="col-sm-5">
+                        <ul class="list-group">
+                            <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+                            <li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
+                            <li class="list-group-item" *ngIf="profile.blog">{{profile.blog}}</li>
+                            <li class="list-group-item" *ngIf="profile.email">{{profile.email}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+    </div>
+</div>
