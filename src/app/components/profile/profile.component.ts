@@ -26,7 +26,7 @@ username: string;
       this.repos = repos;
     });
    }
-
+   
   ngOnInit(): void {
   }
 
