@@ -1,20 +1,23 @@
 <div class="container">
-    <div class="jumbotron bg-info text-center" >Github Search Application</div>
+    <div class="jumbotron bg-info text-center" >
+        <h1>Github Search Application</h1>
+        <p>Search with us!</p>
+    </div>
     <div *ngIf="profile">
         <div class="panel panel-default">
-            <div class="panel-heading">
+            <div class="card-header">
                 {{profile.login}}
                 <span *ngIf="profile.company">, Works at {{profile.company}}</span>
                 {{profile.location}}
                 {{profile.created_at}}
                 
             </div>
-            <div class="panel-body">
+            <div class="card-body">
                 <div class="row">
-                    <div class="col-sm-3">
-                        <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
+                    <div class="col-md-3">
+                        <img src="{{profile.avatar_url}}" class="circle-img rounded-circle" alt="Profile Image">
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-md-5">
                         <ul class="list-group">
                             <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
                             <li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
@@ -28,5 +31,8 @@
     
         </div>
     
+    </div>
+    <div class="card-footer">
+        &copy;Wycliffe 2020
     </div>
 </div>
