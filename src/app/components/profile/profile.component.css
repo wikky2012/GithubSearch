@@ -13,13 +13,18 @@
   .circle-img img {
     height: 100%;
     transform: translateX(-50%);
-    margin-left: 50%;
+    margin-left: 5%;
   }
   .label{
     margin-right: 10px;
     border-radius: 2px;
   }
   #repo{
-    width: 400px;
+    width: 350px;
   }
-  
+  #view{
+    padding-left: 5%;
+  }
+  .search-form{
+    padding-top:30px;
+  }

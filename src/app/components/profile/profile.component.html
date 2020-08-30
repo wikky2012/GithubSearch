@@ -1,10 +1,14 @@
-<div class="container">
-    <div class="jumbotron bg-info text-center" >
+<div class="jumbotron bg-info text-center" >
         <h1>Github Search Application</h1>
         <p>Search with us!</p>
     </div>
+    <form class="search-form">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search git with username"[(ngModel)]="username" name = "username" (keyup)="findProfile()">
+        </div>
+    </form>
     <div *ngIf="profile">
-        <div class="">
+        <div class="card card-default">
             <div class="card-header">
                 {{profile.login}}<small>({{profile.login}})</small>
                 <span *ngIf="profile.company">, Works at {{profile.company}}</span>
@@ -13,10 +17,10 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <img src="{{profile.avatar_url}}" class="circle-img rounded-circle" alt="Profile Image">
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5" id="view">
                         <ul class="list-group">
                             <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
                             <li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
@@ -24,7 +28,7 @@
                             <li class="list-group-item" *ngIf="profile.email"><a href="emailto:{{profile.email}}">{{profile.email}}</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-5">
                         <div>
                             <p>
                                 <span class="label bg-warning">{{profile.followers }}Followers</span>
@@ -56,4 +60,4 @@
     <div class="card-footer">
         &copy;Wycliffe 2020
     </div>
-</div>
+

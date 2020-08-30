@@ -20,4 +20,7 @@ export class ProfileService {
    getProfileRepos(){
     return this.http.get("https://api.github.com/users/" + this.username + "/repos?apiKey=" + this.apiKey)
    }
+   updateProfile(username:string){
+     this.username = username;
+   }
 }
