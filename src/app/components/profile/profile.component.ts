@@ -11,8 +11,7 @@ profile:any;
 repos:any;
 username: string;
   constructor(private profileService: ProfileService) {
-    
-
+  
    }
    findProfile(){
      this.profileService.updateProfile(this.username);
@@ -24,9 +23,9 @@ username: string;
     this.profileService.getProfileRepos().subscribe(repos => { 
       console.log(repos);
       this.repos = repos;
-    });
+    })
    }
-   
+
   ngOnInit(): void {
   }
 

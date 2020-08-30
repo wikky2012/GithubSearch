@@ -1,5 +1,12 @@
 .card-footer{
-    text-align-last: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: lavender;
+  color: black;
+  height: 10vh;
+  text-align: center;
 }
 .circle-img {
     width: 200px;
