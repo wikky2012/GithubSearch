@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProfileService {
 
   private username: string;
-  private apiKey:'8c5516fc6b8865378fdaa6e43b6f757d8a4828a3';
+  private apiKey:'68aa9ea0e237964fa8c82f06ddf8fafbe2d2337a';
   constructor( private http:HttpClient) {
     console.log("Service is now ready");
     this.username = 'wikky2012';

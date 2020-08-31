@@ -13,6 +13,9 @@
     height: 200px;
     overflow: hidden;
   }
+  .card-header{
+    border-radius:5px;
+  }
   .card-header h3{
     text-align: center;
   }
@@ -35,3 +38,7 @@
   .search-form{
     padding-top:30px;
   }
+  h1{
+   color:black;
+  }
+  
